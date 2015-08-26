@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<l7:Bundle xmlns:l7="http://ns.l7tech.com/2010/04/gateway-management">
+    <l7:References>
+        <l7:Item>
+            <l7:Name>testC</l7:Name>
+            <l7:Id>bd2c848e430433e4fa6cfb089e946456</l7:Id>
+            <l7:Type>FOLDER</l7:Type>
+            <l7:TimeStamp>2015-08-20T16:57:50.286+10:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Folder folderId="0000000000000000ffffffffffffec76" id="bd2c848e430433e4fa6cfb089e946456" version="0">
+                    <l7:Name>testC</l7:Name>
+                </l7:Folder>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>policies</l7:Name>
+            <l7:Id>bd2c848e430433e4fa6cfb089e94649f</l7:Id>
+            <l7:Type>FOLDER</l7:Type>
+            <l7:TimeStamp>2015-08-20T16:57:50.286+10:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Folder folderId="bd2c848e430433e4fa6cfb089e946456" id="bd2c848e430433e4fa6cfb089e94649f" version="0">
+                    <l7:Name>policies</l7:Name>
+                </l7:Folder>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>services</l7:Name>
+            <l7:Id>bd2c848e430433e4fa6cfb089e9464e0</l7:Id>
+            <l7:Type>FOLDER</l7:Type>
+            <l7:TimeStamp>2015-08-20T16:57:50.286+10:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Folder folderId="bd2c848e430433e4fa6cfb089e946456" id="bd2c848e430433e4fa6cfb089e9464e0" version="0">
+                    <l7:Name>services</l7:Name>
+                </l7:Folder>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>testC service definitions</l7:Name>
+            <l7:Id>bd2c848e430433e4fa6cfb089e946566</l7:Id>
+            <l7:Type>POLICY</l7:Type>
+            <l7:TimeStamp>2015-08-20T16:57:50.287+10:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Policy guid="fc9d9116-6ad9-4797-baf5-edea2d47c36f" id="bd2c848e430433e4fa6cfb089e946566" version="1">
+                    <l7:PolicyDetail folderId="bd2c848e430433e4fa6cfb089e94649f" guid="fc9d9116-6ad9-4797-baf5-edea2d47c36f" id="bd2c848e430433e4fa6cfb089e946566" version="1">
+                        <l7:Name>testC service definitions</l7:Name>
+                        <l7:PolicyType>$#{template.policy.testC service definitions.PolicyDetail.PolicyType}#</l7:PolicyType>
+                        <l7:Properties>
+                            <l7:Property key="revision">
+                                <l7:LongValue>$#{template.policy.testC service definitions.PolicyDetail.Properties.revision.LongValue}#</l7:LongValue>
+                            </l7:Property>
+                            <l7:Property key="soap">
+                                <l7:BooleanValue>$#{template.policy.testC service definitions.PolicyDetail.Properties.soap.BooleanValue}#</l7:BooleanValue>
+                            </l7:Property>
+                        </l7:Properties>
+                    </l7:PolicyDetail>
+                    <l7:Resources>
+                        <l7:ResourceSet tag="policy">
+                            <l7:Resource type="policy">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;wsp:Policy xmlns:L7p="http://www.layer7tech.com/ws/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+    &lt;wsp:All wsp:Usage="Required"&gt;
+        &lt;L7p:AuditDetailAssertion&gt;
+            &lt;L7p:Detail stringValue="$#{template.policy.testC service definitions.Resources.ResourceSet.xml.All.AuditDetailAssertion.AuditDetailAssertion.Detail.stringValue}#"/&gt;
+            &lt;L7p:LoggingOnly booleanValue="$#{template.policy.testC service definitions.Resources.ResourceSet.xml.All.AuditDetailAssertion.AuditDetailAssertion.LoggingOnly.booleanValue}#"/&gt;
+        &lt;/L7p:AuditDetailAssertion&gt;
+        &lt;L7p:SetVariable&gt;
+            &lt;L7p:Base64Expression stringValue="$#{template.policy.testC service definitions.Resources.ResourceSet.xml.All.SetVariable.SetVariable.Base64Expression.stringValue}#"/&gt;
+            &lt;L7p:VariableToSet stringValue="$#{template.policy.testC service definitions.Resources.ResourceSet.xml.All.SetVariable.SetVariable.VariableToSet.stringValue}#"/&gt;
+        &lt;/L7p:SetVariable&gt;
+    &lt;/wsp:All&gt;
+&lt;/wsp:Policy&gt;
+</l7:Resource>
+                        </l7:ResourceSet>
+                    </l7:Resources>
+                </l7:Policy>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>UsersLDAP</l7:Name>
+            <l7:Id>bd2c848e430433e4fa6cfb089e946054</l7:Id>
+            <l7:Type>ID_PROVIDER_CONFIG</l7:Type>
+            <l7:TimeStamp>2015-08-20T16:57:50.287+10:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:IdentityProvider id="bd2c848e430433e4fa6cfb089e946054" version="0">
+                    <l7:Name>UsersLDAP</l7:Name>
+                    <l7:IdentityProviderType>$#{template.id_provider_config.UsersLDAP.IdentityProviderType}#</l7:IdentityProviderType>
+                    <l7:Properties>
+                        <l7:Property key="groupMembershipCaseInsensitive">
+                            <l7:BooleanValue>$#{template.id_provider_config.UsersLDAP.Properties.groupMembershipCaseInsensitive.BooleanValue}#</l7:BooleanValue>
+                        </l7:Property>
+                        <l7:Property key="groupMaximumNesting">
+                            <l7:IntegerValue>$#{template.id_provider_config.UsersLDAP.Properties.groupMaximumNesting.IntegerValue}#</l7:IntegerValue>
+                        </l7:Property>
+                        <l7:Property key="userLookupByCertMode">
+                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Properties.userLookupByCertMode.StringValue}#</l7:StringValue>
+                        </l7:Property>
+                        <l7:Property key="groupCacheSize">
+                            <l7:IntegerValue>$#{template.id_provider_config.UsersLDAP.Properties.groupCacheSize.IntegerValue}#</l7:IntegerValue>
+                        </l7:Property>
+                        <l7:Property key="adminEnabled">
+                            <l7:BooleanValue>$#{template.id_provider_config.UsersLDAP.Properties.adminEnabled.BooleanValue}#</l7:BooleanValue>
+                        </l7:Property>
+                        <l7:Property key="userCertificateUsage">
+                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Properties.userCertificateUsage.StringValue}#</l7:StringValue>
+                        </l7:Property>
+                    </l7:Properties>
+                    <l7:Extension>
+                        <l7:LdapIdentityProviderDetail>
+                            <l7:SourceType>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.SourceType}#</l7:SourceType>
+                            <l7:ServerUrls>
+                                <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.ServerUrls.StringValue}#</l7:StringValue>
+                            </l7:ServerUrls>
+                            <l7:UseSslClientAuthentication>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.UseSslClientAuthentication}#</l7:UseSslClientAuthentication>
+                            <l7:SearchBase>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.SearchBase}#</l7:SearchBase>
+                            <l7:BindDn>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.BindDn}#</l7:BindDn>
+                            <l7:UserMappings>
+                                <l7:Mapping>
+                                    <l7:ObjectClass>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.UserMappings.Mapping.ObjectClass}#</l7:ObjectClass>
+                                    <l7:Mappings>
+                                        <l7:Property key="userCertAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.UserMappings.Mapping.Mappings.userCertAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="loginAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.UserMappings.Mapping.Mappings.loginAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="nameAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.UserMappings.Mapping.Mappings.nameAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="passwdAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.UserMappings.Mapping.Mappings.passwdAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="kerberosAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.UserMappings.Mapping.Mappings.kerberosAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="emailNameAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.UserMappings.Mapping.Mappings.emailNameAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="firstNameAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.UserMappings.Mapping.Mappings.firstNameAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="objClass">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.UserMappings.Mapping.Mappings.objClass.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="lastNameAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.UserMappings.Mapping.Mappings.lastNameAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                    </l7:Mappings>
+                                </l7:Mapping>
+                            </l7:UserMappings>
+                            <l7:GroupMappings>
+                                <l7:Mapping>
+                                    <l7:ObjectClass>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.1.ObjectClass}#</l7:ObjectClass>
+                                    <l7:Mappings>
+                                        <l7:Property key="nameAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.1.Mappings.nameAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="memberAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.1.Mappings.memberAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="objClass">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.1.Mappings.objClass.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                    </l7:Mappings>
+                                    <l7:Properties>
+                                        <l7:Property key="memberStrategy">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.1.Properties.Property.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                    </l7:Properties>
+                                </l7:Mapping>
+                                <l7:Mapping>
+                                    <l7:ObjectClass>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.2.ObjectClass}#</l7:ObjectClass>
+                                    <l7:Mappings>
+                                        <l7:Property key="nameAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.2.Mappings.nameAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="memberAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.2.Mappings.memberAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="objClass">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.2.Mappings.objClass.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                    </l7:Mappings>
+                                    <l7:Properties>
+                                        <l7:Property key="memberStrategy">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.2.Properties.Property.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                    </l7:Properties>
+                                </l7:Mapping>
+                                <l7:Mapping>
+                                    <l7:ObjectClass>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.3.ObjectClass}#</l7:ObjectClass>
+                                    <l7:Mappings>
+                                        <l7:Property key="nameAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.3.Mappings.nameAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="memberAttrName">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.3.Mappings.memberAttrName.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                        <l7:Property key="objClass">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.3.Mappings.objClass.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                    </l7:Mappings>
+                                    <l7:Properties>
+                                        <l7:Property key="memberStrategy">
+                                            <l7:StringValue>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.GroupMappings.3.Properties.Property.StringValue}#</l7:StringValue>
+                                        </l7:Property>
+                                    </l7:Properties>
+                                </l7:Mapping>
+                            </l7:GroupMappings>
+                            <l7:SpecifiedAttributes>$#{template.id_provider_config.UsersLDAP.Extension.LdapIdentityProviderDetail.SpecifiedAttributes}#</l7:SpecifiedAttributes>
+                        </l7:LdapIdentityProviderDetail>
+                    </l7:Extension>
+                </l7:IdentityProvider>
+            </l7:Resource>
+        </l7:Item>
+        <l7:Item>
+            <l7:Name>testC</l7:Name>
+            <l7:Id>bd2c848e430433e4fa6cfb089e946523</l7:Id>
+            <l7:Type>SERVICE</l7:Type>
+            <l7:TimeStamp>2015-08-20T16:57:50.292+10:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Service id="bd2c848e430433e4fa6cfb089e946523" version="1">
+                    <l7:ServiceDetail folderId="bd2c848e430433e4fa6cfb089e9464e0" id="bd2c848e430433e4fa6cfb089e946523" version="1">
+                        <l7:Name>testC</l7:Name>
+                        <l7:Enabled>$#{template.service.testC.ServiceDetail.Enabled}#</l7:Enabled>
+                        <l7:ServiceMappings>
+                            <l7:HttpMapping>
+                                <l7:UrlPattern>$#{template.service.testC.ServiceDetail.ServiceMappings.HttpMapping.UrlPattern}#</l7:UrlPattern>
+                                <l7:Verbs>
+                                    <l7:Verb>$#{template.service.testC.ServiceDetail.ServiceMappings.HttpMapping.Verbs.1.Verb}#</l7:Verb>
+                                    <l7:Verb>$#{template.service.testC.ServiceDetail.ServiceMappings.HttpMapping.Verbs.2.Verb}#</l7:Verb>
+                                    <l7:Verb>$#{template.service.testC.ServiceDetail.ServiceMappings.HttpMapping.Verbs.3.Verb}#</l7:Verb>
+                                    <l7:Verb>$#{template.service.testC.ServiceDetail.ServiceMappings.HttpMapping.Verbs.4.Verb}#</l7:Verb>
+                                </l7:Verbs>
+                            </l7:HttpMapping>
+                        </l7:ServiceMappings>
+                        <l7:Properties>
+                            <l7:Property key="policyRevision">
+                                <l7:LongValue>$#{template.service.testC.ServiceDetail.Properties.policyRevision.LongValue}#</l7:LongValue>
+                            </l7:Property>
+                            <l7:Property key="wssProcessingEnabled">
+                                <l7:BooleanValue>$#{template.service.testC.ServiceDetail.Properties.wssProcessingEnabled.BooleanValue}#</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="soap">
+                                <l7:BooleanValue>$#{template.service.testC.ServiceDetail.Properties.soap.BooleanValue}#</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="internal">
+                                <l7:BooleanValue>$#{template.service.testC.ServiceDetail.Properties.internal.BooleanValue}#</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="tracingEnabled">
+                                <l7:BooleanValue>$#{template.service.testC.ServiceDetail.Properties.tracingEnabled.BooleanValue}#</l7:BooleanValue>
+                            </l7:Property>
+                        </l7:Properties>
+                    </l7:ServiceDetail>
+                    <l7:Resources>
+                        <l7:ResourceSet tag="policy">
+                            <l7:Resource type="policy" version="1">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;wsp:Policy xmlns:L7p="http://www.layer7tech.com/ws/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+    &lt;wsp:All wsp:Usage="Required"&gt;
+        &lt;L7p:Include&gt;
+            &lt;L7p:PolicyGuid stringValue="$#{template.service.testC.Resources.ResourceSet.xml.All.Include.Include.PolicyGuid.stringValue}#"/&gt;
+        &lt;/L7p:Include&gt;
+        &lt;L7p:HttpBasic/&gt;
+        &lt;L7p:Authentication&gt;
+            &lt;L7p:IdentityProviderOid goidValue="$#{template.service.testC.Resources.ResourceSet.xml.All.Authentication.Authentication.IdentityProviderOid.goidValue}#"/&gt;
+        &lt;/L7p:Authentication&gt;
+        &lt;L7p:HttpRoutingAssertion&gt;
+            &lt;L7p:KeyAlias stringValue="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.HttpRoutingAssertion.KeyAlias.stringValue}#"/&gt;
+            &lt;L7p:NonDefaultKeystoreId goidValue="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.HttpRoutingAssertion.NonDefaultKeystoreId.goidValue}#"/&gt;
+            &lt;L7p:ProtectedServiceUrl stringValue="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.HttpRoutingAssertion.ProtectedServiceUrl.stringValue}#"/&gt;
+            &lt;L7p:ProxyPassword stringValueNull="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.HttpRoutingAssertion.ProxyPassword.stringValueNull}#"/&gt;
+            &lt;L7p:ProxyUsername stringValueNull="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.HttpRoutingAssertion.ProxyUsername.stringValueNull}#"/&gt;
+            &lt;L7p:RequestHeaderRules httpPassthroughRuleSet="included"&gt;
+                &lt;L7p:ForwardAll booleanValue="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.RequestHeaderRules.RequestHeaderRules.ForwardAll.booleanValue}#"/&gt;
+                &lt;L7p:Rules httpPassthroughRules="included"&gt;
+                    &lt;L7p:item httpPassthroughRule="included"&gt;
+                        &lt;L7p:Name stringValue="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.RequestHeaderRules.Rules.included.item.Name.stringValue}#"/&gt;
+                    &lt;/L7p:item&gt;
+                    &lt;L7p:item httpPassthroughRule="included"&gt;
+                        &lt;L7p:Name stringValue="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.RequestHeaderRules.Rules.included.item.Name.stringValue.1}#"/&gt;
+                    &lt;/L7p:item&gt;
+                &lt;/L7p:Rules&gt;
+            &lt;/L7p:RequestHeaderRules&gt;
+            &lt;L7p:RequestParamRules httpPassthroughRuleSet="included"&gt;
+                &lt;L7p:ForwardAll booleanValue="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.RequestParamRules.RequestParamRules.ForwardAll.booleanValue}#"/&gt;
+                &lt;L7p:Rules httpPassthroughRules="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.RequestParamRules.RequestParamRules.Rules.httpPassthroughRules}#"/&gt;
+            &lt;/L7p:RequestParamRules&gt;
+            &lt;L7p:ResponseHeaderRules httpPassthroughRuleSet="included"&gt;
+                &lt;L7p:ForwardAll booleanValue="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.ResponseHeaderRules.ResponseHeaderRules.ForwardAll.booleanValue}#"/&gt;
+                &lt;L7p:Rules httpPassthroughRules="included"&gt;
+                    &lt;L7p:item httpPassthroughRule="included"&gt;
+                        &lt;L7p:Name stringValue="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.ResponseHeaderRules.Rules.item.item.Name.stringValue}#"/&gt;
+                    &lt;/L7p:item&gt;
+                &lt;/L7p:Rules&gt;
+            &lt;/L7p:ResponseHeaderRules&gt;
+            &lt;L7p:SamlAssertionVersion intValue="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.HttpRoutingAssertion.SamlAssertionVersion.intValue}#"/&gt;
+            &lt;L7p:UsesDefaultKeyStore booleanValue="$#{template.service.testC.Resources.ResourceSet.xml.All.HttpRoutingAssertion.HttpRoutingAssertion.UsesDefaultKeyStore.booleanValue}#"/&gt;
+        &lt;/L7p:HttpRoutingAssertion&gt;
+    &lt;/wsp:All&gt;
+&lt;/wsp:Policy&gt;
+</l7:Resource>
+                        </l7:ResourceSet>
+                    </l7:Resources>
+                </l7:Service>
+            </l7:Resource>
+        </l7:Item>
+    </l7:References>
+    <l7:Mappings>
+        <l7:Mapping action="NewOrExisting" srcId="0000000000000000ffffffffffffec76" srcUri="https://172.16.31.158:8443/restman/1.0/folders/0000000000000000ffffffffffffec76" type="FOLDER">
+            <l7:Properties>
+                <l7:Property key="FailOnNew">
+                    <l7:BooleanValue>true</l7:BooleanValue>
+                </l7:Property>
+            </l7:Properties>
+        </l7:Mapping>
+        <l7:Mapping action="NewOrExisting" srcId="bd2c848e430433e4fa6cfb089e946456" srcUri="https://172.16.31.158:8443/restman/1.0/folders/bd2c848e430433e4fa6cfb089e946456" type="FOLDER"/>
+        <l7:Mapping action="NewOrExisting" srcId="bd2c848e430433e4fa6cfb089e94649f" srcUri="https://172.16.31.158:8443/restman/1.0/folders/bd2c848e430433e4fa6cfb089e94649f" type="FOLDER"/>
+        <l7:Mapping action="NewOrExisting" srcId="bd2c848e430433e4fa6cfb089e9464e0" srcUri="https://172.16.31.158:8443/restman/1.0/folders/bd2c848e430433e4fa6cfb089e9464e0" type="FOLDER"/>
+        <l7:Mapping action="NewOrExisting" srcId="bd2c848e430433e4fa6cfb089e946566" srcUri="https://172.16.31.158:8443/restman/1.0/policies/bd2c848e430433e4fa6cfb089e946566" type="POLICY"/>
+        <l7:Mapping action="NewOrExisting" srcId="bd2c848e430433e4fa6cfb089e946054" srcUri="https://172.16.31.158:8443/restman/1.0/identityProviders/bd2c848e430433e4fa6cfb089e946054" type="ID_PROVIDER_CONFIG">
+            <l7:Properties>
+                <l7:Property key="FailOnNew">
+                    <l7:BooleanValue>true</l7:BooleanValue>
+                </l7:Property>
+            </l7:Properties>
+        </l7:Mapping>
+        <l7:Mapping action="NewOrExisting" srcId="bd2c848e430433e4fa6cfb089e946523" srcUri="https://172.16.31.158:8443/restman/1.0/services/bd2c848e430433e4fa6cfb089e946523" type="SERVICE"/>
+    </l7:Mappings>
+</l7:Bundle>
